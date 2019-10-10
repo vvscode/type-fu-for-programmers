@@ -1,0 +1,2700 @@
+@id custom-1e5cea37-a219-490a-8040-19fde7e291d4
+@type code
+@name Zed A. Shaw - Learn Python 3 the Hard Way
+@description Thanks Zed A. Shaw for his Learn Python 3 the Hard Way https://learncodethehardway.org/python/
+The code to Learn Python3 The Hard Way 3. Original code has been taken from https://github.com/zedshaw/learn-python3-thw-code
+@language python
+@items
+# ./ex1.py
+
+print("Hello World!")
+print("Hello Again")
+print("I like typing this.")
+print("This is fun.")
+print('Yay! Printing.')
+print("I'd much rather you 'not'.")
+print('I "said" do not touch this.')
+
+# ---
+
+# ./ex2.py
+
+# A comment, this is so you can read your program later.
+# Anything after the # is ignored by python.
+
+print("I could have code like this.") # and the comment after is ignored
+
+# You can also use a comment to "disable" or comment out a piece of code:
+# print("This won't run.")
+
+print("This will run.")
+
+# ---
+
+# ./ex3.py
+
+print("I will now count my chickens:")
+
+print("Hens", 25 + 30 / 6)
+print("Roosters", 100 - 25 * 3 % 4)
+
+print("Now I will count the eggs:")
+
+print(3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6)
+
+print("Is it true that 3 + 2 < 5 - 7?")
+
+print(3 + 2 < 5 - 7)
+
+print("What is 3 + 2?", 3 + 2)
+print("What is 5 - 7?", 5 - 7)
+
+print("Oh, that's why it's False.")
+
+print("How about some more.")
+
+print("Is it greater?", 5 > -2)
+print("Is it greater or equal?", 5 >= -2)
+print("Is it less or equal?", 5 <= -2)
+
+# ---
+
+# ./ex4.py
+
+cars = 100
+space_in_a_car = 4.0
+drivers = 30
+passengers = 90
+cars_not_driven = cars - drivers
+cars_driven = drivers
+carpool_capacity = cars_driven * space_in_a_car
+average_passengers_per_car = passengers / cars_driven
+
+
+print("There are", cars, "cars available.")
+print("There are only", drivers, "drivers available.")
+print("There will be", cars_not_driven, "empty cars today.")
+print("We can transport", carpool_capacity, "people today.")
+print("We have", passengers, "to carpool today.")
+print("We need to put about", average_passengers_per_car, "in each car.")
+
+# ---
+
+# ./ex5.py
+
+my_name = 'Zed A. Shaw'
+my_age = 35 # not a lie
+my_height = 74 # inches
+my_weight = 180 # lbs
+my_eyes = 'Blue'
+my_teeth = 'White'
+my_hair = 'Brown'
+
+print(f"Let's talk about {my_name}.")
+print(f"He's {my_height} inches tall.")
+print(f"He's {my_weight} pounds heavy.")
+print("Actually that's not too heavy.")
+print(f"He's got {my_eyes} eyes and {my_hair} hair.")
+print(f"His teeth are usually {my_teeth} depending on the coffee.")
+
+# this line is tricky, try to get it exactly right
+total = my_age + my_height + my_weight
+print(f"If I add {my_age}, {my_height}, and {my_weight} I get {total}.")
+
+# ---
+
+# ./ex6.py
+
+types_of_people = 10
+x = f"There are {types_of_people} types of people."
+
+binary = "binary"
+do_not = "don't"
+y = f"Those who know {binary} and those who {do_not}."
+
+print(x)
+print(y)
+
+print(f"I said: {x}")
+print(f"I also said: '{y}'")
+
+hilarious = False
+joke_evaluation = "Isn't that joke so funny?! {}"
+
+print(joke_evaluation.format(hilarious))
+
+w = "This is the left side of..."
+e = "a string with a right side."
+
+print(w + e)
+
+# ---
+
+# ./ex7.py
+
+print("Mary had a little lamb.")
+print("Its fleece was white as {}.".format('snow'))
+print("And everywhere that Mary went.")
+print("." * 10)  # what'd that do?
+
+end1 = "C"
+end2 = "h"
+end3 = "e"
+end4 = "e"
+end5 = "s"
+end6 = "e"
+end7 = "B"
+end8 = "u"
+end9 = "r"
+end10 = "g"
+end11 = "e"
+end12 = "r"
+
+# watch that "end" parameter at the end. (end=' ')
+# try removing it to see what happens
+print(end1 + end2 + end3 + end4 + end5 + end6, end=' ')
+print(end7 + end8 + end9 + end10 + end11 + end12)
+
+# ---
+
+# ./ex8.py
+
+formatter = "{} {} {} {}"
+
+print(formatter.format(1, 2, 3, 4))
+print(formatter.format("one", "two", "three", "four"))
+print(formatter.format(True, False, False, True))
+print(formatter.format(formatter, formatter, formatter, formatter))
+print(formatter.format(
+    "I had this thing.",
+    "That you could type up right.",
+    "But it didn't sing.",
+    "So I said goodnight."
+))
+
+# ---
+
+# ./ex9.py
+
+# Here's some new strange stuff, remember type it exactly.
+
+days = "Mon Tue Wed Thu Fri Sat Sun"
+months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
+
+print("Here are the days: ", days)
+print("Here are the months: ", months)
+
+print("""
+There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we want, or 5, or 6.
+""")
+
+# ---
+
+# ./ex10.py
+
+tabby_cat = "\tI'm tabbed in."
+persian_cat = "I'm split\non a line."
+backslash_cat = "I'm \\ a \\ cat."
+
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+"""
+
+print(tabby_cat)
+print(persian_cat)
+print(backslash_cat)
+print(fat_cat)
+
+# ---
+
+# ./ex11.py
+
+### @export "fake"
+import fake_input
+input, input = fake_input.create(['38', '6\'2"', '180lbs'])
+
+### @export "code"
+print("How old are you?", end=' ')
+age = input()
+print("How tall are you?", end=' ')
+height = input()
+print("How much do you weigh?", end=' ')
+weight = input()
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+# ---
+
+# ./ex12.py
+
+### @export "fake"
+import fake_input
+input, input = fake_input.create(['38', '6\'2"', '180lbs'])
+
+### @export "code"
+age = input("How old are you? ")
+height = input("How tall are you? ")
+weight = input("How much do you weigh? ")
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+# ---
+
+# ./ex13.py
+
+from sys import argv
+# read the WYSS section for how to run this
+script, first, second, third = argv
+
+print("The script is called:", script)
+print("Your first variable is:", first)
+print("Your second variable is:", second)
+print("Your third variable is:", third)
+
+# ---
+
+# ./ex14.py
+
+### @export "setup"
+import fake_input
+input, input = fake_input.create(['Yes',
+                                   "San Francisco",
+                                   'Tandy 1000'])
+
+### @export "code"
+from sys import argv
+
+script, user_name = argv
+prompt = '> '
+
+print(f"Hi {user_name}, I'm the {script} script.")
+print("I'd like to ask you a few questions.")
+print(f"Do you like me {user_name}?")
+likes = input(prompt)
+
+print(f"Where do you live {user_name}?")
+lives = input(prompt)
+
+print("What kind of computer do you have?")
+computer = input(prompt)
+
+print(f"""
+Alright, so you said {likes} about liking me.
+You live in {lives}.  Not sure where that is.
+And you have a {computer} computer.  Nice.
+""")
+
+# ---
+
+# ./ex15.py
+
+### @export "setup"
+import fake_input
+input, input = fake_input.create(['ex15_sample.txt'])
+
+### @export "code"
+from sys import argv
+
+script, filename = argv
+
+txt = open(filename)
+
+print(f"Here's your file {filename}:")
+print(txt.read())
+
+print("Type the filename again:")
+file_again = input("> ")
+
+txt_again = open(file_again)
+
+print(txt_again.read())
+
+# ---
+
+# ./ex16.py
+
+### @export "setup"
+import fake_input
+input, input = fake_input.create(['', 'Mary had a little lamb',
+                                   'Its fleece was white as snow',
+                                   'It was also tasty'])
+
+### @export "code"
+from sys import argv
+
+script, filename = argv
+
+print(f"We're going to erase {filename}.")
+print("If you don't want that, hit CTRL-C (^C).")
+print("If you do want that, hit RETURN.")
+
+input("?")
+
+print("Opening the file...")
+target = open(filename, 'w')
+
+print("Truncating the file.  Goodbye!")
+target.truncate()
+
+print("Now I'm going to ask you for three lines.")
+
+line1 = input("line 1: ")
+line2 = input("line 2: ")
+line3 = input("line 3: ")
+
+print("I'm going to write these to the file.")
+
+target.write(line1)
+target.write("\n")
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
+
+print("And finally, we close it.")
+target.close()
+
+# ---
+
+# ./ex17.py
+
+### @export "fake"
+import fake_input
+input, input = fake_input.create([''])
+
+### @export "code"
+from sys import argv
+from os.path import exists
+
+script, from_file, to_file = argv
+
+print(f"Copying from {from_file} to {to_file}")
+
+# we could do these two on one line, how?
+in_file = open(from_file)
+indata = in_file.read()
+
+print(f"The input file is {len(indata)} bytes long")
+
+print(f"Does the output file exist? {exists(to_file)}")
+print("Ready, hit RETURN to continue, CTRL-C to abort.")
+input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print("Alright, all done.")
+
+out_file.close()
+in_file.close()
+
+# ---
+
+# ./ex18.py
+
+# this one is like your scripts with argv
+def print_two(*args):
+    arg1, arg2 = args
+    print(f"arg1: {arg1}, arg2: {arg2}")
+
+# ok, that *args is actually pointless, we can just do this
+def print_two_again(arg1, arg2):
+    print(f"arg1: {arg1}, arg2: {arg2}")
+
+# this just takes one argument
+def print_one(arg1):
+    print(f"arg1: {arg1}")
+
+# this one takes no arguments
+def print_none():
+    print("I got nothin'.")
+
+
+print_two("Zed","Shaw")
+print_two_again("Zed","Shaw")
+print_one("First!")
+print_none()
+
+# ---
+
+# ./ex19.py
+
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    print(f"You have {cheese_count} cheeses!")
+    print(f"You have {boxes_of_crackers} boxes of crackers!")
+    print("Man that's enough for a party!")
+    print("Get a blanket.\n")
+
+
+print("We can just give the function numbers directly:")
+cheese_and_crackers(20, 30)
+
+
+print("OR, we can use variables from our script:")
+amount_of_cheese = 10
+amount_of_crackers = 50
+
+cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+
+
+print("We can even do math inside too:")
+cheese_and_crackers(10 + 20, 5 + 6)
+
+
+print("And we can combine the two, variables and math:")
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
+
+# ---
+
+# ./ex20.py
+
+from sys import argv
+
+script, input_file = argv
+
+def print_all(f):
+    print(f.read())
+
+def rewind(f):
+    f.seek(0)
+
+def print_a_line(line_count, f):
+    print(line_count, f.readline())
+
+current_file = open(input_file)
+
+print("First let's print the whole file:\n")
+
+print_all(current_file)
+
+print("Now let's rewind, kind of like a tape.")
+
+rewind(current_file)
+
+print("Let's print three lines:")
+
+current_line = 1
+print_a_line(current_line, current_file)
+
+current_line = current_line + 1
+print_a_line(current_line, current_file)
+
+current_line = current_line + 1
+print_a_line(current_line, current_file)
+
+# ---
+
+# ./ex21.py
+
+def add(a, b):
+    print(f"ADDING {a} + {b}")
+    return a + b
+
+def subtract(a, b):
+    print(f"SUBTRACTING {a} - {b}")
+    return a - b
+
+def multiply(a, b):
+    print(f"MULTIPLYING {a} * {b}")
+    return a * b
+
+def divide(a, b):
+    print(f"DIVIDING {a} / {b}")
+    return a / b
+
+
+print("Let's do some math with just functions!")
+
+age = add(30, 5)
+height = subtract(78, 4)
+weight = multiply(90, 2)
+iq = divide(100, 2)
+
+print(f"Age: {age}, Height: {height}, Weight: {weight}, IQ: {iq}")
+
+
+# A puzzle for the extra credit, type it in anyway.
+print("Here is a puzzle.")
+
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+
+print("That becomes: ", what, "Can you do it by hand?")
+
+# ---
+
+# ./ex22.py
+
+# empty exercise
+
+# ---
+
+# ./ex23.py
+
+# empty exercise
+
+# ---
+
+# ./ex24.py
+
+print("Let's practice everything.")
+print('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
+
+poem = """
+\tThe lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explanation
+\n\t\twhere there is none.
+"""
+
+print("--------------")
+print(poem)
+print("--------------")
+
+
+five = 10 - 2 + 3 - 6
+print(f"This should be five: {five}")
+
+def secret_formula(started):
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crates = jars / 100
+    return jelly_beans, jars, crates
+
+
+start_point = 10000
+beans, jars, crates = secret_formula(start_point)
+
+# remember that this is another way to format a string
+print("With a starting point of: {}".format(start_point))
+# it's just like with an f"" string
+print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
+
+start_point = start_point / 10
+
+print("We can also do that this way:")
+formula = secret_formula(start_point)
+# this is an easy way to apply a list to a format string
+print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+
+# ---
+
+# ./ex25_pycon.py
+
+import ex25
+sentence = "All good things come to those who wait."
+words = ex25.break_words(sentence)
+words
+sorted_words = ex25.sort_words(words)
+sorted_words
+ex25.print_first_word(words)
+ex25.print_last_word(words)
+words
+ex25.print_first_word(sorted_words)
+ex25.print_last_word(sorted_words)
+sorted_words
+sorted_words = ex25.sort_sentence(sentence)
+sorted_words
+ex25.print_first_and_last(sentence)
+ex25.print_first_and_last_sorted(sentence)
+
+# ---
+
+# ./ex25.py
+
+def break_words(stuff):
+    """This function will break up words for us."""
+    words = stuff.split(' ')
+    return words
+
+def sort_words(words):
+    """Sorts the words."""
+    return sorted(words)
+
+def print_first_word(words):
+    """Prints the first word after popping it off."""
+    word = words.pop(0)
+    print(word)
+
+def print_last_word(words):
+    """Prints the last word after popping it off."""
+    word = words.pop(-1)
+    print(word)
+
+def sort_sentence(sentence):
+    """Takes in a full sentence and returns the sorted words."""
+    words = break_words(sentence)
+    return sort_words(words)
+
+def print_first_and_last(sentence):
+    """Prints the first and last words of the sentence."""
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+def print_first_and_last_sorted(sentence):
+    """Sorts the words then prints the first and last one."""
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+# ---
+
+# ./ex26.py
+
+print("How old are you?", end=' ')
+age = input()
+print("How tall are you?", end=' ')
+print("How much do you weigh?", end=' '
+weight = input()
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+script, filename = argv
+
+txt = open(filenme)
+
+print("Here's your file {filename}:")
+print(tx.read())
+
+print("Type the filename again:")
+file_again = input("> ")
+
+txt_again = open(file_again)
+
+print(txt_again_read())
+
+
+print('Let's practice everything.')
+print('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
+
+poem = """
+\tThe lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explanation
+\n\t\twhere there is none.
+"""
+
+print("--------------)
+print(poem)
+print(--------------")
+
+
+five = 10 - 2 + 3 - 
+print(f"This should be five: {five}"
+
+def secret_formula(started)
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crates = jars  100
+    return jelly_beans, jars, crates
+
+
+start_point = 10000
+beans, jars = secret_formula(start_point)
+
+# remember that this is another way to format a string
+print("With a starting point of: {}".format(start_point))
+# it's just like with an f"" string
+print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
+
+start_point = start_point / 10
+
+print("We can also do that this way:")
+formula = secret_formula(startpoint)
+# this is an easy way to apply a list to a format string
+print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+
+
+
+people = 20
+cates = 30
+dogs = 15
+
+
+if people < cats:
+    print "Too many cats! The world is doomed!"
+
+if people < cats:
+    print("Not many cats! The world is saved!")
+
+if people < dogs:
+    print("The world is drooled on!")
+
+if people > dogs
+    print("The world is dry!")
+
+
+dogs += 5
+
+if people >= dogs:
+    print("People are greater than or equal to dogs.")
+
+if people <= dogs
+    print("People are less than or equal to dogs.)
+
+
+if people = dogs:
+    print("People are dogs.")
+
+# ---
+
+# ./ex28.py
+
+# empty exercise
+
+# ---
+
+# ./ex29.py
+
+people = 20
+cats = 30
+dogs = 15
+
+
+if people < cats:
+    print("Too many cats! The world is doomed!")
+
+if people > cats:
+    print("Not many cats! The world is saved!")
+
+if people < dogs:
+    print("The world is drooled on!")
+
+if people > dogs:
+    print("The world is dry!")
+
+
+dogs += 5
+
+if people >= dogs:
+    print("People are greater than or equal to dogs.")
+
+if people <= dogs:
+    print("People are less than or equal to dogs.")
+
+
+if people == dogs:
+    print("People are dogs.")
+
+# ---
+
+# ./ex30.py
+
+people = 30
+cars = 40
+trucks = 15
+
+
+if cars > people:
+    print("We should take the cars.")
+elif cars < people:
+    print("We should not take the cars.")
+else:
+    print("We can't decide.")
+
+if trucks > cars:
+    print("That's too many trucks.")
+elif trucks < cars:
+    print("Maybe we could take the trucks.")
+else:
+    print("We still can't decide.")
+
+if people > trucks:
+    print("Alright, let's just take the trucks.")
+else:
+    print("Fine, let's stay home then.")
+
+# ---
+
+# ./ex31.py
+
+### @export "fake"
+import fake_input
+input, input = fake_input.create([
+    '1', 
+    '2', 
+    ''])
+
+### @export "code"
+
+print("""You enter a dark room with two doors.
+Do you go through door #1 or door #2?""")
+
+door = input("> ")
+
+if door == "1":
+    print("There's a giant bear here eating a cheese cake.  What do you do?")
+    print("1. Take the cake.")
+    print("2. Scream at the bear.")
+
+    bear = input("> ")
+
+    if bear == "1":
+        print("The bear eats your face off.  Good job!")
+    elif bear == "2":
+        print("The bear eats your legs off.  Good job!")
+    else:
+        print(f"Well, doing {bear} is probably better.  Bear runs away.")
+
+elif door == "2":
+    print("You stare into the endless abyss at Cthulhu's retina.")
+    print("1. Blueberries.")
+    print("2. Yellow jacket clothespins.")
+    print("3. Understanding revolvers yelling melodies.")
+
+    insanity = input("> ")
+    
+    if insanity == "1" or insanity == "2":
+        print("Your body survives powered by a mind of jello.  Good job!")
+    else:
+        print("The insanity rots your eyes into a pool of muck.  Good job!")
+
+else:
+    print("You stumble around and fall on a knife and die.  Good job!")
+
+# ---
+
+# ./ex32.py
+
+the_count = [1, 2, 3, 4, 5]
+fruits = ['apples', 'oranges', 'pears', 'apricots']
+change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
+
+# this first kind of for-loop goes through a list
+for number in the_count:
+    print(f"This is count {number}")
+
+# same as above
+for fruit in fruits:
+    print(f"A fruit of type: {fruit}")
+
+# also we can go through mixed lists too
+# notice we have to use {} since we don't know what's in it
+for i in change:
+    print(f"I got {i}")
+
+# we can also build lists, first start with an empty one
+elements = []
+
+# then use the range function to do 0 to 5 counts
+for i in range(0, 6):
+    print(f"Adding {i} to the list.")
+    # append is a function that lists understand
+    elements.append(i)
+
+# now we can print them out too
+for i in elements:
+    print(f"Element was: {i}")
+
+# ---
+
+# ./ex33.py
+
+i = 0
+numbers = []
+
+while i < 6:
+    print(f"At the top i is {i}")
+    numbers.append(i)
+
+    i = i + 1
+    print("Numbers now: ", numbers)
+    print(f"At the bottom i is {i}")
+
+
+print("The numbers: ")
+
+for num in numbers:
+    print(num)
+
+# ---
+
+# ./ex34.py
+
+# empty exercise
+
+# ---
+
+# ./ex35.py
+
+### @export "fake"
+import fake_input
+input, input = fake_input.create([
+    'left', 
+    'taunt bear', 
+    'open door',
+    '1000'
+    ''])
+
+### @export "code"
+from sys import exit
+
+def gold_room():
+    print("This room is full of gold.  How much do you take?")
+
+    choice = input("> ")
+    if "0" in choice or "1" in choice:
+        how_much = int(choice)
+    else:
+        dead("Man, learn to type a number.")
+
+    if how_much < 50:
+        print("Nice, you're not greedy, you win!")
+        exit(0)
+    else:
+        dead("You greedy bastard!")
+
+
+def bear_room():
+    print("There is a bear here.")
+    print("The bear has a bunch of honey.")
+    print("The fat bear is in front of another door.")
+    print("How are you going to move the bear?")
+    bear_moved = False
+
+    while True:
+        choice = input("> ")
+
+        if choice == "take honey":
+            dead("The bear looks at you then slaps your face off.")
+        elif choice == "taunt bear" and not bear_moved:
+            print("The bear has moved from the door. You can go through it now.")
+            bear_moved = True
+        elif choice == "taunt bear" and bear_moved:
+            dead("The bear gets pissed off and chews your leg off.")
+        elif choice == "open door" and bear_moved:
+            gold_room()
+        else:
+            print("I got no idea what that means.")
+
+
+def cthulhu_room():
+    print("Here you see the great evil Cthulhu.")
+    print("He, it, whatever stares at you and you go insane.")
+    print("Do you flee for your life or eat your head?")
+
+    choice = input("> ")
+
+    if "flee" in choice:
+        start()
+    elif "head" in choice:
+        dead("Well that was tasty!")
+    else:
+        cthulhu_room()
+
+
+def dead(why):
+    print(why, "Good job!")
+    exit(0)
+
+def start():
+    print("You are in a dark room.")
+    print("There is a door to your right and left.")
+    print("Which one do you take?")
+
+    choice = input("> ")
+
+    if choice == "left":
+        bear_room()
+    elif choice == "right":
+        cthulhu_room()
+    else:
+        dead("You stumble around the room until you starve.")
+
+
+start()
+
+# ---
+
+# ./ex36.py
+
+# empty exercise
+
+# ---
+
+# ./ex37.py
+
+# empty exercise
+
+# ---
+
+# ./ex38.py
+
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
+
+print("Wait there are not 10 things in that list. Let's fix that.")
+
+stuff = ten_things.split(' ')
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+
+while len(stuff) != 10:
+    next_one = more_stuff.pop()
+    print("Adding: ", next_one)
+    stuff.append(next_one)
+    print(f"There are {len(stuff)} items now.")
+
+print("There we go: ", stuff)
+
+print("Let's do some things with stuff.")
+
+print(stuff[1])
+print(stuff[-1]) # whoa! fancy
+print(stuff.pop())
+print(' '.join(stuff)) # what? cool!
+print('#'.join(stuff[3:5])) # super stellar!
+
+# ---
+
+# ./ex39_pycon.py
+
+### @export "first"
+things = ['a', 'b', 'c', 'd']
+print(things[1])
+things[1] = 'z'
+print(things[1])
+things
+### @export "second"
+stuff = {'name': 'Zed', 'age': 39, 'height': 6 * 12 + 2}
+print(stuff['name'])
+print(stuff['age'])
+print(stuff['height'])
+stuff['city'] = "SF"
+print(stuff['city'])
+### @export "third"
+stuff[1] = "Wow"
+stuff[2] = "Neato"
+print(stuff[1])
+print(stuff[2])
+stuff
+### @export "fourth"
+del stuff['city']
+del stuff[1]
+del stuff[2]
+stuff
+
+# ---
+
+# ./ex39_test.py
+
+import hashmap
+
+# create a mapping of state to abbreviation
+states = hashmap.new()
+hashmap.set(states, 'Oregon', 'OR')
+hashmap.set(states, 'Florida', 'FL')
+hashmap.set(states, 'California', 'CA')
+hashmap.set(states, 'New York', 'NY')
+hashmap.set(states, 'Michigan', 'MI')
+
+# create a basic set of states and some cities in them
+cities = hashmap.new()
+hashmap.set(cities, 'CA', 'San Francisco')
+hashmap.set(cities, 'MI', 'Detroit')
+hashmap.set(cities, 'FL', 'Jacksonville')
+
+# add some more cities
+hashmap.set(cities, 'NY', 'New York')
+hashmap.set(cities, 'OR', 'Portland')
+
+
+# print out some cities
+print('-' * 10)
+print(f"NY State has: {hashmap.get(cities, 'NY')}")
+print(f"OR State has: {hashmap.get(cities, 'OR')}")
+
+# print some states
+print('-' * 10)
+print(f"Michigan's abbreviation is: {hashmap.get(states, 'Michigan')}")
+print(f"Florida's abbreviation is: {hashmap.get(states, 'Floridat')}")
+
+# do it by using the state then cities dict
+print('-' * 10)
+test1 = hashmap.get(cities, hashmap.get(states, 'Michigan'))
+print(f"Michigan has: {test1}")
+test2 = hashmap.get(cities, hashmap.get(states, 'Florida'))
+print(f"Florida has: {test2}")
+
+# print every state abbreviation
+print('-' * 10)
+hashmap.list(states)
+
+# print every city in state
+print('-' * 10)
+hashmap.list(cities)
+
+print('-' * 10)
+state = hashmap.get(states, 'Texas')
+
+if not state:
+  print("Sorry, no Texas.")
+
+# default values using ||= with the nil result
+# can you do this on one line?
+city = hashmap.get(cities, 'TX', 'Does Not Exist')
+print(f"The city for the state 'TX' is: {city}")
+
+# ---
+
+# ./ex39.py
+
+# create a mapping of state to abbreviation
+states = {
+    'Oregon': 'OR',
+    'Florida': 'FL',
+    'California': 'CA',
+    'New York': 'NY',
+    'Michigan': 'MI'
+}
+
+# create a basic set of states and some cities in them
+cities = {
+    'CA': 'San Francisco',
+    'MI': 'Detroit',
+    'FL': 'Jacksonville'
+}
+
+# add some more cities
+cities['NY'] = 'New York'
+cities['OR'] = 'Portland'
+
+# print out some cities
+print('-' * 10)
+print("NY State has: ", cities['NY'])
+print("OR State has: ", cities['OR'])
+
+# print some states
+print('-' * 10)
+print("Michigan's abbreviation is: ", states['Michigan'])
+print("Florida's abbreviation is: ", states['Florida'])
+
+# do it by using the state then cities dict
+print('-' * 10)
+print("Michigan has: ", cities[states['Michigan']])
+print("Florida has: ", cities[states['Florida']])
+
+# print every state abbreviation
+print('-' * 10)
+for state, abbrev in list(states.items()):
+    print(f"{state} is abbreviated {abbrev}")
+
+# print every city in state
+print('-' * 10)
+for abbrev, city in list(cities.items()):
+    print(f"{abbrev} has the city {city}")
+
+# now do both at the same time
+print('-' * 10)
+for state, abbrev in list(states.items()):
+    print(f"{state} state is abbreviated {abbrev} and has city {cities[abbrev]}")
+
+print('-' * 10)
+# safely get a abbreviation by state that might not be there
+state = states.get('Texas')
+
+if not state:
+    print("Sorry, no Texas.")
+
+# get a city with a default value
+city = cities.get('TX', 'Does Not Exist')
+print(f"The city for the state 'TX' is: {city}")
+
+# ---
+
+# ./ex40.py
+
+class Song(object):
+
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
+
+happy_bday = Song(["Happy birthday to you",
+                   "I don't want to get sued",
+                   "So I'll stop right there"])
+
+bulls_on_parade = Song(["They rally around tha family",
+                        "With pockets full of shells"])
+
+happy_bday.sing_me_a_song()
+
+bulls_on_parade.sing_me_a_song()
+
+# ---
+
+# ./ex40a.py
+
+### @export "part0"
+
+mystuff = {'apple': "I AM APPLES!"}
+print(mystuff['apple'])
+
+### @export "part1"
+
+# this goes in mystuff.py
+def apple():
+    print("I AM APPLES!")
+
+### @export "part2"
+
+import mystuff
+mystuff.apple()
+
+### @export "part3"
+
+def apple():
+    print("I AM APPLES!")
+
+# this is just a variable
+tangerine = "Living reflection of a dream"
+
+### @export "part4"
+
+import mystuff
+
+mystuff.apple()
+print(mystuff.tangerine)
+
+### @export "part5"
+
+mystuff['apple'] # get apple from dict
+mystuff.apple() # get apple from the module
+mystuff.tangerine # same thing, it's just a variable
+
+### @export "part6"
+
+class MyStuff(object):
+
+    def __init__(self):
+        self.tangerine = "And now a thousand years between"
+
+    def apple(self):
+        print("I AM CLASSY APPLES!")
+
+
+### @export "part7"
+
+thing = MyStuff()
+thing.apple()
+print(thing.tangerine)
+
+### @export "part8"
+
+# dict style
+mystuff['apples']
+
+# module style
+mystuff.apples()
+print(mystuff.tangerine)
+
+# class style
+thing = MyStuff()
+thing.apples()
+print(thing.tangerine)
+
+# ---
+
+# ./ex41.py
+
+import random
+from urllib.request import urlopen
+import sys
+
+WORD_URL = "http://learncodethehardway.org/words.txt"
+WORDS = []
+
+PHRASES = {
+    "class %%%(%%%):":
+      "Make a class named %%% that is-a %%%.",
+    "class %%%(object):\n\tdef __init__(self, ***)" :
+      "class %%% has-a __init__ that takes self and *** parameters.",
+    "class %%%(object):\n\tdef ***(self, @@@)":
+      "class %%% has-a function named *** that takes self and @@@ parameters.",
+    "*** = %%%()":
+      "Set *** to an instance of class %%%.",
+    "***.***(@@@)":
+      "From *** get the *** function, and call it with parameters self, @@@.",
+    "***.*** = '***'":
+      "From *** get the *** attribute and set it to '***'."
+}
+
+# do they want to drill phrases first
+if len(sys.argv) == 2 and sys.argv[1] == "english":
+    PHRASE_FIRST = True
+else:
+    PHRASE_FIRST = False
+
+# load up the words from the website
+for word in urlopen(WORD_URL).readlines():
+    WORDS.append(str(word.strip(), encoding="utf-8"))
+
+
+def convert(snippet, phrase):
+    class_names = [w.capitalize() for w in
+                   random.sample(WORDS, snippet.count("%%%"))]
+    other_names = random.sample(WORDS, snippet.count("***"))
+    results = []
+    param_names = []
+
+    for i in range(0, snippet.count("@@@")):
+        param_count = random.randint(1,3)
+        param_names.append(', '.join(random.sample(WORDS, param_count)))
+
+    for sentence in snippet, phrase:
+        result = sentence[:]
+
+        # fake class names
+        for word in class_names:
+            result = result.replace("%%%", word, 1)
+
+        # fake other names
+        for word in other_names:
+            result = result.replace("***", word, 1)
+
+        # fake parameter lists
+        for word in param_names:
+            result = result.replace("@@@", word, 1)
+
+        results.append(result)
+
+    return results
+
+
+# keep going until they hit CTRL-D
+try:
+    while True:
+        snippets = list(PHRASES.keys())
+        random.shuffle(snippets)
+
+        for snippet in snippets:
+            phrase = PHRASES[snippet]
+            question, answer = convert(snippet, phrase)
+            if PHRASE_FIRST:
+                question, answer = answer, question
+
+            print(question)
+
+            input("> ")
+            print(f"ANSWER:  {answer}\n\n")
+except EOFError:
+    print("\nBye")
+
+# ---
+
+# ./ex42_demo.py
+
+class TheThing(object):
+
+    def __init__(self):
+        self.number = 0
+
+    def some_function(self):
+        print("I got called.")
+
+    def add_me_up(self, more):
+        self.number += more
+        return self.number
+
+# two different things
+a = TheThing()
+b = TheThing()
+
+a.some_function()
+b.some_function()
+
+print(a.add_me_up(20))
+print(b.add_me_up(30))
+
+print(a.number)
+print(b.number)
+
+# Study this. This is how you pass a variable
+# from one class to another. You will need this.
+class TheMultiplier(object):
+
+    def __init__(self, base):
+        self.base = base
+
+    def do_it(self, m):
+        return m * self.base
+
+x = TheMultiplier(a.number)
+print(x.do_it(b.number))
+
+# ---
+
+# ./ex42.py
+
+## Animal is-a object (yes, sort of confusing) look at the extra credit
+class Animal(object):
+    pass
+
+## ??
+class Dog(Animal):
+
+    def __init__(self, name):
+        ## ??
+        self.name = name
+
+## ??
+class Cat(Animal):
+
+    def __init__(self, name):
+        ## ??
+        self.name = name
+
+## ??
+class Person(object):
+
+    def __init__(self, name):
+        ## ??
+        self.name = name
+
+        ## Person has-a pet of some kind
+        self.pet = None
+
+## ??
+class Employee(Person):
+
+    def __init__(self, name, salary):
+        ## ?? hmm what is this strange magic?
+        super(Employee, self).__init__(name)
+        ## ??
+        self.salary = salary
+
+## ??
+class Fish(object):
+    pass
+
+## ??
+class Salmon(Fish):
+    pass
+
+## ??
+class Halibut(Fish):
+    pass
+
+
+## rover is-a Dog
+rover = Dog("Rover")
+
+## ??
+satan = Cat("Satan")
+
+## ??
+mary = Person("Mary")
+
+## ??
+mary.pet = satan
+
+## ??
+frank = Employee("Frank", 120000)
+
+## ??
+frank.pet = rover
+
+## ??
+flipper = Fish()
+
+## ??
+crouse = Salmon()
+
+## ??
+harry = Halibut()
+
+# ---
+
+# ./ex43_classes.py
+
+class Scene(object):
+
+    def enter(self):
+        pass
+
+
+class Engine(object):
+
+    def __init__(self, scene_map):
+        pass
+
+    def play(self):
+        pass
+
+class Death(Scene):
+
+    def enter(self):
+        pass
+
+class CentralCorridor(Scene):
+
+    def enter(self):
+        pass
+
+class LaserWeaponArmory(Scene):
+
+    def enter(self):
+        pass
+
+class TheBridge(Scene):
+
+    def enter(self):
+        pass
+
+class EscapePod(Scene):
+
+    def enter(self):
+        pass
+
+
+class Map(object):
+
+    def __init__(self, start_scene):
+        pass
+
+    def next_scene(self, scene_name):
+        pass
+
+    def opening_scene(self):
+        pass
+
+
+a_map = Map('central_corridor')
+a_game = Engine(a_map)
+a_game.play()
+
+# ---
+
+# ./ex43.py
+
+### @export "fake"
+import fake_input
+input, input = fake_input.create(['dodge!'])
+
+### @export "imports"
+
+from sys import exit
+from random import randint
+
+### @export "scene_class"
+
+class Scene(object):
+
+    def enter(self):
+        print("This scene is not yet configured. Subclass it and implement enter().")
+        exit(1)
+
+### @export "engine_class"
+
+class Engine(object):
+
+    def __init__(self, scene_map):
+        self.scene_map = scene_map
+
+    def play(self):
+        current_scene = self.scene_map.opening_scene()
+        last_scene = self.scene_map.next_scene('finished')
+
+        while current_scene != last_scene:
+            next_scene_name = current_scene.enter()
+            current_scene = self.scene_map.next_scene(next_scene_name)
+
+        # be sure to print out the last scene
+        current_scene.enter()
+
+### @export "death_scene"
+
+class Death(Scene):
+
+    quips = [
+        "You died.  You kinda suck at this.",
+         "Your mom would be proud...if she were smarter.",
+         "Such a luser.",
+         "I have a small puppy that's better at this."
+    ]
+
+    def enter(self):
+        print(Death.quips[randint(0, len(self.quips)-1)])
+        exit(1)
+
+
+### @export "central_corridor"
+
+class CentralCorridor(Scene):
+
+    def enter(self):
+        print("The Gothons of Planet Percal #25 have invaded your ship and destroyed")
+        print("your entire crew.  You are the last surviving member and your last")
+        print("mission is to get the neutron destruct bomb from the Weapons Armory,")
+        print("put it in the bridge, and blow the ship up after getting into an ")
+        print("escape pod.")
+        print("\n")
+        print("You're running down the central corridor to the Weapons Armory when")
+        print("a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown costume")
+        print("flowing around his hate filled body.  He's blocking the door to the")
+        print("Armory and about to pull a weapon to blast you.")
+
+        action = input("> ")
+
+        if action == "shoot!":
+            print("Quick on the draw you yank out your blaster and fire it at the Gothon.")
+            print("His clown costume is flowing and moving around his body, which throws")
+            print("off your aim.  Your laser hits his costume but misses him entirely.  This")
+            print("completely ruins his brand new costume his mother bought him, which")
+            print("makes him fly into an insane rage and blast you repeatedly in the face until")
+            print("you are dead.  Then he eats you.")
+            return 'death'
+
+        elif action == "dodge!":
+            print("Like a world class boxer you dodge, weave, slip and slide right")
+            print("as the Gothon's blaster cranks a laser past your head.")
+            print("In the middle of your artful dodge your foot slips and you")
+            print("bang your head on the metal wall and pass out.")
+            print("You wake up shortly after only to die as the Gothon stomps on")
+            print("your head and eats you.")
+            return 'death'
+
+        elif action == "tell a joke":
+            print("Lucky for you they made you learn Gothon insults in the academy.")
+            print("You tell the one Gothon joke you know:")
+            print("Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr.")
+            print("The Gothon stops, tries not to laugh, then busts out laughing and can't move.")
+            print("While he's laughing you run up and shoot him square in the head")
+            print("putting him down, then jump through the Weapon Armory door.")
+            return 'laser_weapon_armory'
+
+        else:
+            print("DOES NOT COMPUTE!")
+            return 'central_corridor'
+
+### @export "game_scenes"
+
+class LaserWeaponArmory(Scene):
+
+    def enter(self):
+        print("You do a dive roll into the Weapon Armory, crouch and scan the room")
+        print("for more Gothons that might be hiding.  It's dead quiet, too quiet.")
+        print("You stand up and run to the far side of the room and find the")
+        print("neutron bomb in its container.  There's a keypad lock on the box")
+        print("and you need the code to get the bomb out.  If you get the code")
+        print("wrong 10 times then the lock closes forever and you can't")
+        print("get the bomb.  The code is 3 digits.")
+        code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}"
+        guess = input("[keypad]> ")
+        guesses = 0
+
+        while guess != code and guesses < 10:
+            print("BZZZZEDDD!")
+            guesses += 1
+            guess = input("[keypad]> ")
+
+        if guess == code:
+            print("The container clicks open and the seal breaks, letting gas out.")
+            print("You grab the neutron bomb and run as fast as you can to the")
+            print("bridge where you must place it in the right spot.")
+            return 'the_bridge'
+        else:
+            print("The lock buzzes one last time and then you hear a sickening")
+            print("melting sound as the mechanism is fused together.")
+            print("You decide to sit there, and finally the Gothons blow up the")
+            print("ship from their ship and you die.")
+            return 'death'
+
+
+
+class TheBridge(Scene):
+
+    def enter(self):
+        print("You burst onto the Bridge with the netron destruct bomb")
+        print("under your arm and surprise 5 Gothons who are trying to")
+        print("take control of the ship.  Each of them has an even uglier")
+        print("clown costume than the last.  They haven't pulled their")
+        print("weapons out yet, as they see the active bomb under your")
+        print("arm and don't want to set it off.")
+        
+        action = input("> ")
+
+        if action == "throw the bomb":
+            print("In a panic you throw the bomb at the group of Gothons")
+            print("and make a leap for the door.  Right as you drop it a")
+            print("Gothon shoots you right in the back killing you.")
+            print("As you die you see another Gothon frantically try to disarm")
+            print("the bomb. You die knowing they will probably blow up when")
+            print("it goes off.")
+            return 'death'
+
+        elif action == "slowly place the bomb":
+            print("You point your blaster at the bomb under your arm")
+            print("and the Gothons put their hands up and start to sweat.")
+            print("You inch backward to the door, open it, and then carefully")
+            print("place the bomb on the floor, pointing your blaster at it.")
+            print("You then jump back through the door, punch the close button")
+            print("and blast the lock so the Gothons can't get out.")
+            print("Now that the bomb is placed you run to the escape pod to")
+            print("get off this tin can.")
+            return 'escape_pod'
+        else:
+            print("DOES NOT COMPUTE!")
+            return "the_bridge"
+
+
+class EscapePod(Scene):
+
+    def enter(self):
+        print("You rush through the ship desperately trying to make it to")
+        print("the escape pod before the whole ship explodes.  It seems like")
+        print("hardly any Gothons are on the ship, so your run is clear of")
+        print("interference.  You get to the chamber with the escape pods, and")
+        print("now need to pick one to take.  Some of them could be damaged")
+        print("but you don't have time to look.  There's 5 pods, which one")
+        print("do you take?")
+
+        good_pod = randint(1,5)
+        guess = input("[pod #]> ")
+
+
+        if int(guess) != good_pod:
+            print("You jump into pod {guess} and hit the eject button.")
+            print("The pod escapes out into the void of space, then")
+            print("implodes as the hull ruptures, crushing your body")
+            print("into jam jelly.")
+            return 'death'
+        else:
+            print("You jump into pod {guess} and hit the eject button.")
+            print("The pod easily slides out into space heading to")
+            print("the planet below.  As it flies to the planet, you look")
+            print("back and see your ship implode then explode like a")
+            print("bright star, taking out the Gothon ship at the same")
+            print("time.  You won!")
+            
+            return 'finished'
+
+class Finished(Scene):
+
+    def enter(self):
+        print("You won! Good job.")
+        return 'finished'
+
+
+### @export "map_class"
+
+class Map(object):
+
+    scenes = {
+        'central_corridor': CentralCorridor(),
+        'laser_weapon_armory': LaserWeaponArmory(),
+        'the_bridge': TheBridge(),
+        'escape_pod': EscapePod(),
+        'death': Death(),
+        'finished': Finished(),
+    }
+
+    def __init__(self, start_scene):
+        self.start_scene = start_scene
+
+    def next_scene(self, scene_name):
+        val = Map.scenes.get(scene_name)
+        return val
+
+    def opening_scene(self):
+        return self.next_scene(self.start_scene)
+
+### @export "final_run"
+
+a_map = Map('central_corridor')
+a_game = Engine(a_map)
+a_game.play()
+
+# ---
+
+# ./ex44a.py
+
+class Parent(object):
+
+    def implicit(self):
+        print("PARENT implicit()")
+
+class Child(Parent):
+    pass
+
+dad = Parent()
+son = Child()
+
+dad.implicit()
+son.implicit()
+
+# ---
+
+# ./ex44b.py
+
+class Parent(object):
+
+    def override(self):
+        print("PARENT override()")
+
+class Child(Parent):
+    
+    def override(self):
+        print("CHILD override()")
+
+dad = Parent()
+son = Child()
+
+dad.override()
+son.override()
+
+# ---
+
+# ./ex44c.py
+
+class Parent(object):
+
+    def altered(self):
+        print("PARENT altered()")
+
+class Child(Parent):
+    
+    def altered(self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child, self).altered()
+        print("CHILD, AFTER PARENT altered()")
+
+dad = Parent()
+son = Child()
+
+dad.altered()
+son.altered()
+
+# ---
+
+# ./ex44d.py
+
+class Parent(object):
+
+    def override(self):
+        print("PARENT override()")
+
+    def implicit(self):
+        print("PARENT implicit()")
+
+    def altered(self):
+        print("PARENT altered()")
+
+class Child(Parent):
+    
+    def override(self):
+        print("CHILD override()")
+
+    def altered(self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child, self).altered()
+        print("CHILD, AFTER PARENT altered()")
+
+dad = Parent()
+son = Child()
+
+dad.implicit()
+son.implicit()
+
+dad.override()
+son.override()
+
+dad.altered()
+son.altered()
+
+# ---
+
+# ./ex44e.py
+
+class Other(object):
+
+    def override(self):
+        print("OTHER override()")
+
+    def implicit(self):
+        print("OTHER implicit()")
+
+    def altered(self):
+        print("OTHER altered()")
+
+class Child(object):
+
+    def __init__(self):
+        self.other = Other()
+
+    def implicit(self):
+        self.other.implicit()
+    
+    def override(self):
+        print("CHILD override()")
+
+    def altered(self):
+        print("CHILD, BEFORE OTHER altered()")
+        self.other.altered()
+        print("CHILD, AFTER OTHER altered()")
+
+son = Child()
+
+son.implicit()
+son.override()
+son.altered()
+
+# ---
+
+# ./ex45.py
+
+# ---
+
+# ./ex47_tests.py
+
+from nose.tools import *
+from ex47.game import Room
+
+
+def test_room():
+    gold = Room("GoldRoom", 
+                """This room has gold in it you can grab. There's a
+                door to the north.""")
+    assert_equal(gold.name, "GoldRoom")
+    assert_equal(gold.paths, {})
+
+def test_room_paths():
+    center = Room("Center", "Test room in the center.")
+    north = Room("North", "Test room in the north.")
+    south = Room("South", "Test room in the south.")
+
+    center.add_paths({'north': north, 'south': south})
+    assert_equal(center.go('north'), north)
+    assert_equal(center.go('south'), south)
+    
+def test_map():
+    start = Room("Start", "You can go west and down a hole.")
+    west = Room("Trees", "There are trees here, you can go east.")
+    down = Room("Dungeon", "It's dark down here, you can go up.")
+
+    start.add_paths({'west': west, 'down': down})
+    west.add_paths({'east': start})
+    down.add_paths({'up': start})
+
+    assert_equal(start.go('west'), west)
+    assert_equal(start.go('west').go('east'), start)
+    assert_equal(start.go('down').go('up'), start)
+
+# ---
+
+# ./ex47.py
+
+class Room(object):
+
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.paths = {}
+
+    def go(self, direction):
+        return self.paths.get(direction, None)
+
+    def add_paths(self, paths):
+        self.paths.update(paths)
+
+# ---
+
+# ./ex47/ex47/__init__.py
+
+# ---
+
+# ./ex47/ex47/game.py
+
+class Room(object):
+
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.paths = {}
+
+    def go(self, direction):
+        return self.paths.get(direction, None)
+
+    def add_paths(self, paths):
+        self.paths.update(paths)
+
+# ---
+
+# ./ex47/setup.py
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+config = {
+    'description': 'My Project',
+    'author': 'My Name',
+    'url': 'URL to get it at.',
+    'download_url': 'Where to download it.',
+    'author_email': 'My email.',
+    'version': '0.1',
+    'install_requires': ['nose'],
+    'packages': ['NAME'],
+    'scripts': [],
+    'name': 'projectname'
+}
+
+setup(**config)
+
+# ---
+
+# ./ex47/tests/__init__.py
+
+# ---
+
+# ./ex47/tests/ex47_tests.py
+
+from nose.tools import *
+from ex47.game import Room
+
+
+def test_room():
+    gold = Room("GoldRoom", 
+                """This room has gold in it you can grab. There's a
+                door to the north.""")
+    assert_equal(gold.name, "GoldRoom")
+    assert_equal(gold.paths, {})
+
+def test_room_paths():
+    center = Room("Center", "Test room in the center.")
+    north = Room("North", "Test room in the north.")
+    south = Room("South", "Test room in the south.")
+
+    center.add_paths({'north': north, 'south': south})
+    assert_equal(center.go('north'), north)
+    assert_equal(center.go('south'), south)
+    
+def test_map():
+    start = Room("Start", "You can go west and down a hole.")
+    west = Room("Trees", "There are trees here, you can go east.")
+    down = Room("Dungeon", "It's dark down here, you can go up.")
+
+    start.add_paths({'west': west, 'down': down})
+    west.add_paths({'east': start})
+    down.add_paths({'up': start})
+
+    assert_equal(start.go('west'), west)
+    assert_equal(start.go('west').go('east'), start)
+    assert_equal(start.go('down').go('up'), start)
+
+# ---
+
+# ./ex48_convert.py
+
+def convert_number(s):
+    try:
+        return int(s)
+    except ValueError:
+        return None
+
+# ---
+
+# ./ex48_pycon.py
+
+int("hell")
+
+# ---
+
+# ./ex48/__init__.py
+
+# ---
+
+# ./ex48/lexicon.py
+
+WORD_TYPES = {
+    "north" : "direction",
+    "south" : "direction", 
+    "east" : "direction",
+    "west" : "direction",
+    "go" : "verb",
+    "kill" : "verb",
+    "eat" : "verb",
+    "the" : "stop",
+    "in" : "stop",
+    "of" : "stop",
+    "bear" : "noun",
+    "princess" : "noun",
+}
+
+def convert_number(word):
+    try:
+        return int(word)
+    except:
+        return None
+
+def scan(sentence):
+    words = sentence.split()
+    results = []
+
+    for word in words:
+        word_type = WORD_TYPES.get(word)
+        
+        if word_type == None:
+            # it might be a number, so try converting
+            number = convert_number(word)
+
+            if number != None:
+                results.append(('number', number))
+            else:
+                results.append(('error', word))
+        else:
+            results.append((word_type, word))
+   
+    return results
+
+# ---
+
+# ./ex48/parser.py
+
+### @export "exception"
+class ParserError(Exception):
+    pass
+
+### @export "sentence"
+class Sentence(object):
+
+    def __init__(self, subject, verb, obj):
+        # remember we take ('noun','princess') tuples and convert them
+        self.subject = subject[1]
+        self.verb = verb[1]
+        self.object = obj[1]
+
+### @export "peek"
+def peek(word_list):
+    if word_list:
+        word = word_list[0]
+        return word[0]
+    else:
+        return None
+
+
+### @export "match"
+def match(word_list, expecting):
+    if word_list:
+        word = word_list.pop(0)
+
+        if word[0] == expecting:
+            return word
+        else:
+            return None
+    else:
+        return None
+
+
+### @export "skip"
+def skip(word_list, word_type):
+    while peek(word_list) == word_type:
+        match(word_list, word_type)
+
+
+### @export "parse_verb"
+def parse_verb(word_list):
+    skip(word_list, 'stop')
+
+    if peek(word_list) == 'verb':
+        return match(word_list, 'verb')
+    else:
+        raise ParserError("Expected a verb next.")
+
+
+### @export "parse_object"
+def parse_object(word_list):
+    skip(word_list, 'stop')
+    next_word = peek(word_list)
+
+    if next_word == 'noun':
+        return match(word_list, 'noun')
+    elif next_word == 'direction':
+        return match(word_list, 'direction')
+    else:
+        raise ParserError("Expected a noun or direction next.")
+
+
+### @export "parse_subject"
+def parse_subject(word_list):
+    skip(word_list, 'stop')
+    next_word = peek(word_list)
+
+    if next_word == 'noun':
+        return match(word_list, 'noun')
+    elif next_word == 'verb':
+        return ('noun', 'player')
+    else:
+        raise ParserError("Expected a verb next.")
+
+### @export "parse_sentence"
+def parse_sentence(word_list):
+    subj = parse_subject(word_list)
+    verb = parse_verb(word_list)
+    obj = parse_object(word_list)
+
+    return Sentence(subj, verb, obj)
+
+# ---
+
+# ./ex49_pycon.py
+
+from ex48 import lexicon
+lexicon.scan("go north")
+lexicon.scan("kill the princess")
+lexicon.scan("eat the bear")
+lexicon.scan("open the door and smack the bear in the nose")
+
+# ---
+
+# ./ex49a_pycon.py
+
+from ex48.parser import *
+x = parse_sentence([('verb', 'run'), ('direction', 'north')])
+x.subject
+x.verb
+x.object
+x = parse_sentence([('noun', 'bear'), ('verb', 'eat'), ('stop', 'the'),
+                    ('noun', 'honey')])
+x.subject
+x.verb
+x.object
+
+# ---
+
+# ./ex50.py
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == "__main__":
+    app.run()
+
+# ---
+
+# ./ex50/gothonweb/app.py
+
+from flask import Flask
+from flask import render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    greeting = "Hello World"
+    return render_template("index.html", greeting=greeting)
+
+if __name__ == "__main__":
+    app.run()
+
+# ---
+
+# ./ex50/gothonweb/gothonweb/__init__.py
+
+# ---
+
+# ./ex50/gothonweb/tests/__init__.py
+
+# ---
+
+# ./ex51.py
+
+# empty exercise
+
+# ---
+
+# ./ex51/gothonweb/app.py
+
+from flask import Flask
+from flask import render_template
+from flask import request
+
+app = Flask(__name__)
+
+@app.route("/hello", methods=['POST', 'GET'])
+def index():
+    greeting = "Hello World"
+
+    if request.method == "POST":
+        name = request.form['name']
+        greet = request.form['greet']
+        greeting = f"{greet}, {name}"
+        return render_template("index.html", greeting=greeting)
+    else:
+        return render_template("hello_form.html")
+
+
+if __name__ == "__main__":
+    app.run()
+
+# ---
+
+# ./ex51/gothonweb/bin/__init__.py
+
+# ---
+
+# ./ex51/gothonweb/form_test.py
+
+from flask import Flask
+from flask import render_template
+from flask import request
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    name = request.args.get('name', 'Nobody')
+
+    if name:
+        greeting = f"Hello, {name}"
+    else:
+        greeting = "Hello World"
+
+    return render_template("index.html", greeting=greeting)
+
+if __name__ == "__main__":
+    app.run()
+
+# ---
+
+# ./ex51/gothonweb/gothonweb/__init__.py
+
+# ---
+
+# ./ex51/gothonweb/tests/__init__.py
+
+# ---
+
+# ./ex51/gothonweb/tests/app_tests.py
+
+from nose.tools import *
+from app import app
+
+app.config['TESTING'] = True
+web = app.test_client()
+
+def test_index():
+    rv = web.get('/', follow_redirects=True)
+    assert_equal(rv.status_code, 404)
+
+    rv = web.get('/hello', follow_redirects=True)
+    assert_equal(rv.status_code, 200)
+    assert_in(b"Fill Out This Form", rv.data)
+
+    data = {'name': 'Zed', 'greet': 'Hola'}
+    rv = web.post('/hello', follow_redirects=True, data=data)
+    assert_in(b"Zed", rv.data)
+    assert_in(b"Hola", rv.data)
+
+# ---
+
+# ./ex51/gothonweb/tests/tools.py
+
+from nose.tools import *
+import re
+
+def assert_response(resp, contains=None, matches=None, headers=None, status="200"):
+
+    assert status in resp.status, "Expected response %r not in %r" % (status, resp.status)
+
+    if status == "200":
+        assert resp.data, "Response data is empty."
+
+    if contains:
+        assert contains in resp.data, "Response does not contain %r" % contains
+
+    if matches:
+        reg = re.compile(matches)
+        assert reg.matches(resp.data), "Response does not match %r" % matches
+
+    if headers:
+        assert_equal(resp.headers, headers)
+
+# ---
+
+# ./ex52.py
+
+# empty exercise
+
+# ---
+
+# ./ex52/gothonweb/app.py
+
+from flask import Flask, session, redirect, url_for, escape, request
+from flask import render_template
+from gothonweb import planisphere
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    # this is used to "setup" the session with starting values
+    session['room_name'] = planisphere.START
+    return redirect(url_for("game"))
+
+@app.route("/game", methods=['GET', 'POST'])
+def game():
+    room_name = session.get('room_name')
+
+    if request.method == "GET":
+        if room_name:
+            room = planisphere.load_room(room_name)
+            return render_template("show_room.html", room=room)
+        else:
+            # why is there here? do you need it?'
+            return render_template("you_died.html")
+    else:
+        action = request.form.get('action')
+
+        if room_name and action:
+            room = planisphere.load_room(room_name)
+            next_room = room.go(action)
+
+            if not next_room:
+                session['room_name'] = planisphere.name_room(room)
+            else:
+                session['room_name'] = planisphere.name_room(next_room)
+
+        return redirect(url_for("game"))
+
+
+# YOU SHOULD CHANGE THIS IF YOU PUT ON THE INTERNET
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+
+if __name__ == "__main__":
+    app.run()
+
+# ---
+
+# ./ex52/gothonweb/bin/__init__.py
+
+# ---
+
+# ./ex52/gothonweb/gothonweb/__init__.py
+
+# ---
+
+# ./ex52/gothonweb/gothonweb/planisphere.py
+
+class Room(object):
+
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.paths = {}
+
+    def go(self, direction):
+        return self.paths.get(direction, None)
+
+    def add_paths(self, paths):
+        self.paths.update(paths)
+
+
+central_corridor = Room("Central Corridor",
+"""
+The Gothons of Planet Percal #25 have invaded your ship and destroyed
+your entire crew.  You are the last surviving member and your last
+mission is to get the neutron destruct bomb from the Weapons Armory,
+put it in the bridge, and blow the ship up after getting into an 
+escape pod.
+
+You're running down the central corridor to the Weapons Armory when
+a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown costume
+flowing around his hate filled body.  He's blocking the door to the
+Armory and about to pull a weapon to blast you.
+""")
+
+
+laser_weapon_armory = Room("Laser Weapon Armory",
+"""
+Lucky for you they made you learn Gothon insults in the academy.
+You tell the one Gothon joke you know:
+Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr.
+The Gothon stops, tries not to laugh, then busts out laughing and can't move.
+While he's laughing you run up and shoot him square in the head
+putting him down, then jump through the Weapon Armory door.
+
+You do a dive roll into the Weapon Armory, crouch and scan the room
+for more Gothons that might be hiding.  It's dead quiet, too quiet.
+You stand up and run to the far side of the room and find the
+neutron bomb in its container.  There's a keypad lock on the box
+and you need the code to get the bomb out.  If you get the code
+wrong 10 times then the lock closes forever and you can't
+get the bomb.  The code is 3 digits.
+""")
+
+
+the_bridge = Room("The Bridge",
+"""
+The container clicks open and the seal breaks, letting gas out.
+You grab the neutron bomb and run as fast as you can to the
+bridge where you must place it in the right spot.
+
+You burst onto the Bridge with the netron destruct bomb
+under your arm and surprise 5 Gothons who are trying to
+take control of the ship.  Each of them has an even uglier
+clown costume than the last.  They haven't pulled their
+weapons out yet, as they see the active bomb under your
+arm and don't want to set it off.
+""")
+
+
+escape_pod = Room("Escape Pod",
+"""
+You point your blaster at the bomb under your arm
+and the Gothons put their hands up and start to sweat.
+You inch backward to the door, open it, and then carefully
+place the bomb on the floor, pointing your blaster at it.
+You then jump back through the door, punch the close button
+and blast the lock so the Gothons can't get out.
+Now that the bomb is placed you run to the escape pod to
+get off this tin can.
+
+You rush through the ship desperately trying to make it to
+the escape pod before the whole ship explodes.  It seems like
+hardly any Gothons are on the ship, so your run is clear of
+interference.  You get to the chamber with the escape pods, and
+now need to pick one to take.  Some of them could be damaged
+but you don't have time to look.  There's 5 pods, which one
+do you take?
+""")
+
+
+the_end_winner = Room("The End",
+"""
+You jump into pod 2 and hit the eject button.
+The pod easily slides out into space heading to
+the planet below.  As it flies to the planet, you look
+back and see your ship implode then explode like a
+bright star, taking out the Gothon ship at the same
+time.  You won!
+""")
+
+
+the_end_loser = Room("The End",
+"""
+You jump into a random pod and hit the eject button.
+The pod escapes out into the void of space, then
+implodes as the hull ruptures, crushing your body
+into jam jelly.
+"""
+)
+
+escape_pod.add_paths({
+    '2': the_end_winner,
+    '*': the_end_loser
+})
+
+generic_death = Room("death", "You died.")
+
+the_bridge.add_paths({
+    'throw the bomb': generic_death,
+    'slowly place the bomb': escape_pod
+})
+
+laser_weapon_armory.add_paths({
+    '0132': the_bridge,
+    '*': generic_death
+})
+
+central_corridor.add_paths({
+    'shoot!': generic_death,
+    'dodge!': generic_death,
+    'tell a joke': laser_weapon_armory
+})
+
+START = 'central_corridor'
+
+def load_room(name):
+    """
+    There is a potential security problem here.
+    Who gets to set name? Can that expose a variable?
+    """
+    return globals().get(name)
+
+def name_room(room):
+    """
+    Same possible security problem.  Can you trust room?
+    What's a better solution than this globals lookup?
+    """
+    for key, value in globals().items():
+        if value == room:
+            return key
+
+# ---
+
+# ./ex52/gothonweb/tests/__init__.py
+
+# ---
+
+# ./ex52/gothonweb/tests/app_tests.py
+
+from nose.tools import *
+from app import app
+
+app.config['TESTING'] = True
+web = app.test_client()
+
+def test_index():
+    rv = web.get('/', follow_redirects=True)
+    assert_in(b"Central Corridor", rv.data)
+
+# ---
+
+# ./ex52/gothonweb/tests/planisphere_tests.py
+
+from nose.tools import *
+from gothonweb.planisphere import *
+
+def test_room():
+    gold = Room("GoldRoom", 
+                """This room has gold in it you can grab. There's a
+                door to the north.""")
+    assert_equal(gold.name, "GoldRoom")
+    assert_equal(gold.paths, {})
+
+def test_room_paths():
+    center = Room("Center", "Test room in the center.")
+    north = Room("North", "Test room in the north.")
+    south = Room("South", "Test room in the south.")
+
+    center.add_paths({'north': north, 'south': south})
+    assert_equal(center.go('north'), north)
+    assert_equal(center.go('south'), south)
+    
+def test_map():
+    start = Room("Start", "You can go west and down a hole.")
+    west = Room("Trees", "There are trees here, you can go east.")
+    down = Room("Dungeon", "It's dark down here, you can go up.")
+
+    start.add_paths({'west': west, 'down': down})
+    west.add_paths({'east': start})
+    down.add_paths({'up': start})
+
+    assert_equal(start.go('west'), west)
+    assert_equal(start.go('west').go('east'), start)
+    assert_equal(start.go('down').go('up'), start)
+
+def test_gothon_game_map():
+    start_room = load_room(START)
+    assert_equal(start_room.go('shoot!'), generic_death)
+    assert_equal(start_room.go('dodge!'), generic_death)
+
+    room = start_room.go('tell a joke')
+    assert_equal(room, laser_weapon_armory)
